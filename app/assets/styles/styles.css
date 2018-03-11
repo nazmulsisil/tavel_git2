@@ -1,0 +1,20 @@
+$main-blue: #ab342f;
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+  backface-visibility: hidden;
+}
+
+body {
+  color: $main-blue;
+}
+
+.main {
+  a {
+    text-decoration: none;
+  }
+}
