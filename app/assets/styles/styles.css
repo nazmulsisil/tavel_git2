@@ -1,20 +1,11 @@
-$main-blue: #ab342f;
-
-*,
-*::after,
-*::before {
-  padding: 0;
-  margin: 0;
-  box-sizing: inherit;
-  backface-visibility: hidden;
-}
-
-body {
-  color: $main-blue;
-}
-
-.main {
-  a {
-    text-decoration: none;
-  }
-}
+@import "normalize.css";
+@import "./base/_variables";
+@import "./base/_global";
+@import "./base/_mixins";
+@import "./modules/_large-hero";
+@import "./modules/_btn";
+@import "./modules/_typography";
+@import "./modules/_row";
+@import "./modules/_wrapper";
+@import "./modules/_generic-content";
+@import "./base/_utilities";

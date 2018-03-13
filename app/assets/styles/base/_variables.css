@@ -1,0 +1,11 @@
+$mainBlue: #2f5572;
+$mainOrange: #d59541;
+
+$space-1: 1rem;
+$space-2: calc($space-1 * 1.8);
+$space-3: calc($space-2 * 1.8);
+$space-4: calc($space-3 * 1.8);
+$space-5: calc($space-4 * 1.8);
+
+$gutter-h: 6rem;
+$gutter-v: 6rem;
