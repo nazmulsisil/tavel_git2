@@ -1,5 +1,6 @@
 .testimonials {
-  background-image: url("../../assets/images/testimonials-bg.jpg");
+  background-image: none;
+  background: #c3d0d99a;
   background-position: center top;
   background-size: cover;
 
@@ -12,5 +13,9 @@
     display: inline-block;
     position: relative;
     top: 1rem;
+  }
+
+  @mixin atMedium {
+    background-image: url("../../assets/images/testimonials-bg.jpg");
   }
 }

@@ -1,0 +1,20 @@
+.footer {
+  background-color: $mainBlue;
+  padding: 3rem 0.5rem;
+  color: white;
+  text-align: center;
+
+  &__para {
+    margin: 0;
+    font-weight: 200;
+  }
+
+  &__text {
+    display: block;
+    margin-bottom: 1rem;
+    @mixin atMedium {
+      display: inline-block;
+      margin-right: 1rem;
+    }
+  }
+}
