@@ -1,11 +1,14 @@
 .row {
-  & > * {
+  max-width: 100%;
+  padding-right: 2rem;
+  padding-left: 2rem;
+
+  [class^="row__"] {
     float: left;
+    padding-right: 0;
 
     @mixin atMedium {
-      &:not(:last-child) {
-        padding-right: $gutter-v;
-      }
+      padding-right: $gutter-v;
     }
   }
 
@@ -33,5 +36,56 @@
     }
   }
 
+  &__half {
+    width: 100%;
+    @mixin atMedium {
+      width: 50%;
+    }
+  }
+
   @mixin clearfix;
+
+  &--gutters {
+    max-width: calc(100% + $gutter-v);
+
+    @mixin atMedium {
+      width: calc(100% + $gutter-v);
+    }
+  }
+
+  &--gutters-small {
+    max-width: calc(100% + $gutter-v-small);
+
+    @mixin atMedium {
+      width: calc(100% + $gutter-v-small);
+    }
+
+    [class^="row__"] {
+      float: left;
+      padding-right: 0;
+
+      @mixin atMedium {
+        padding-right: $gutter-v-small;
+      }
+    }
+  }
+
+  &--equal-height-at-medium {
+    @mixin atMedium {
+      display: flex;
+    }
+
+    [class^="row__"] {
+      @mixin atMedium {
+        float: none;
+        display: flex;
+        justify-content: flex-start;
+      }
+    }
+  }
+
+  &--no-padding-at-medium {
+    padding-right: 0;
+    padding-left: 0;
+  }
 }

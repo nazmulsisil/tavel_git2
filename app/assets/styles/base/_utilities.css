@@ -155,8 +155,13 @@
   padding-bottom: $space-3 !important;
 }
 .u-p-h-4 {
-  padding-top: $space-4 !important;
-  padding-bottom: $space-4 !important;
+  padding-top: $space-3 !important;
+  padding-bottom: $space-3 !important;
+
+  @mixin atMedium {
+    padding-top: $space-4 !important;
+    padding-bottom: $space-4 !important;
+  }
 }
 .u-p-h-5 {
   padding-top: $space-5 !important;

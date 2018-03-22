@@ -1,0 +1,16 @@
+.testimonials {
+  background-image: url("../../assets/images/testimonials-bg.jpg");
+  background-position: center top;
+  background-size: cover;
+
+  .section__heading {
+    color: $mainBlue;
+    position: relative;
+  }
+
+  &__icon {
+    display: inline-block;
+    position: relative;
+    top: 1rem;
+  }
+}

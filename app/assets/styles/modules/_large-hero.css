@@ -3,7 +3,6 @@
   border-bottom: 0.8rem solid $mainBlue;
 
   &__text-content {
-    background-color: rgba(0, 0, 100, 0.1);
     position: absolute;
     top: 50%;
     transform: translateY(-50%);

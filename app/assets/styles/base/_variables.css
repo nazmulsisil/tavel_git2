@@ -9,3 +9,4 @@ $space-5: calc($space-4 * 1.8);
 
 $gutter-h: 6rem;
 $gutter-v: 6rem;
+$gutter-v-small: 4rem;

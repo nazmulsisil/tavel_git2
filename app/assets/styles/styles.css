@@ -8,4 +8,10 @@
 @import "./modules/_row";
 @import "./modules/_wrapper";
 @import "./modules/_generic-content";
+@import "./modules/_features";
+@import "./modules/_our-beginning";
+@import "./modules/_testomonials";
+@import "./modules/_section";
+@import "./modules/_card";
+@import "./modules/_sprite";
 @import "./base/_utilities";
