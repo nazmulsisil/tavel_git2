@@ -1,0 +1,171 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  transition: all 0.3s ease-out;
+
+  &--is-expanded {
+    background-color: rgba($mainBlue, 0.3);
+  }
+
+  &__pic {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    background-color: $mainBlue;
+    padding: 3rem;
+    overflow: hidden;
+    transform: translateX(-50%) scale(0.7);
+    transform-origin: top;
+
+    @mixin atMedium {
+      left: auto;
+      transform: translateX(0) scale(1);
+    }
+  }
+
+  &__img {
+    display: block;
+  }
+
+  &__img-text {
+    display: block;
+    padding-left: 1000rem;
+    color: white;
+  }
+
+  &__menu-icon {
+    height: 2rem;
+    width: 2rem;
+    position: absolute;
+    z-index: 10;
+    top: 1rem;
+    right: 1rem;
+
+    &__middle {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      height: 0.3rem;
+      width: 100%;
+      background-color: white;
+
+      &,
+      &::before,
+      &::after {
+        transition: all 0.3s ease-out;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: -0.8rem;
+        left: 0;
+        height: 0.3rem;
+        width: 100%;
+        background-color: white;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0.8rem;
+        left: 0;
+        height: 0.3rem;
+        width: 100%;
+        background-color: white;
+      }
+
+      &--tapped {
+        background-color: transparent;
+
+        &::before {
+          top: 0;
+          transform: rotate(45deg);
+        }
+        &::after {
+          top: 0;
+          transform: rotate(-45deg);
+        }
+      }
+    }
+
+    @mixin atMedium {
+      display: none;
+    }
+  }
+
+  &__menu-content {
+    visibility: hidden;
+    padding-top: 9rem;
+    text-align: center;
+    transition: all 0.3s ease-out;
+    opacity: 0;
+    transform: scale(1.2);
+
+    @mixin atMedium {
+      visibility: visible;
+      transform: scale(1);
+      padding-top: 0rem;
+      opacity: 1;
+    }
+
+    &--show {
+      visibility: visible;
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  &__nav {
+    font-weight: 200;
+    margin-top: 1.2rem;
+
+    @mixin atMedium {
+      float: right;
+    }
+  }
+
+  ul {
+    padding: 0;
+  }
+
+  li {
+    display: inline-block;
+    padding-right: 0;
+
+    a {
+      text-decoration: none;
+      color: white;
+      margin: 0;
+      font-size: 1.2rem;
+      background-color: $mainBlue;
+
+      padding: 0.4rem 0.6rem;
+
+      @mixin atMedium {
+        background: none;
+        font-size: inherit;
+      }
+    }
+
+    @mixin atMedium {
+      float: right;
+      padding-right: 1rem;
+    }
+  }
+
+  &__btn {
+    margin: 1rem 0;
+    @mixin atMedium {
+      float: right;
+    }
+  }
+
+  @mixin atMedium {
+    background-color: rgba($mainBlue, 0.3);
+  }
+}

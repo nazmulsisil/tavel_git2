@@ -500,6 +500,7 @@ a {
     -webkit-transform: translateY(-50%);
             transform: translateY(-50%);
     width: 100%;
+    padding-top: 6rem;
   }
 
 .large-hero__title {
@@ -1010,6 +1011,216 @@ Change ./gulp/templates/sprite.css
       display: inline-block;
       margin-right: 1rem
   }
+  }
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.header--is-expanded {
+    background-color: rgba(47,85,114, 0.3);
+  }
+
+.header__pic {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    background-color: #2f5572;
+    padding: 3rem;
+    overflow: hidden;
+    -webkit-transform: translateX(-50%) scale(0.7);
+            transform: translateX(-50%) scale(0.7);
+    -webkit-transform-origin: top;
+            transform-origin: top;
+  }
+
+@media (min-width: 800px) {
+
+.header__pic {
+      left: auto;
+      -webkit-transform: translateX(0) scale(1);
+              transform: translateX(0) scale(1)
+  }
+  }
+
+.header__img {
+    display: block;
+  }
+
+.header__img-text {
+    display: block;
+    padding-left: 1000rem;
+    color: white;
+  }
+
+.header__menu-icon {
+    height: 2rem;
+    width: 2rem;
+    position: absolute;
+    z-index: 10;
+    top: 1rem;
+    right: 1rem;
+  }
+
+.header__menu-icon__middle {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      -webkit-transform: translateY(-50%);
+              transform: translateY(-50%);
+      height: 0.3rem;
+      width: 100%;
+      background-color: white;
+    }
+
+.header__menu-icon__middle,
+      .header__menu-icon__middle::before,
+      .header__menu-icon__middle::after {
+        -webkit-transition: all 0.3s ease-out;
+        transition: all 0.3s ease-out;
+      }
+
+.header__menu-icon__middle::before {
+        content: "";
+        position: absolute;
+        top: -0.8rem;
+        left: 0;
+        height: 0.3rem;
+        width: 100%;
+        background-color: white;
+      }
+
+.header__menu-icon__middle::after {
+        content: "";
+        position: absolute;
+        top: 0.8rem;
+        left: 0;
+        height: 0.3rem;
+        width: 100%;
+        background-color: white;
+      }
+
+.header__menu-icon__middle--tapped {
+        background-color: transparent;
+      }
+
+.header__menu-icon__middle--tapped::before {
+          top: 0;
+          -webkit-transform: rotate(45deg);
+                  transform: rotate(45deg);
+        }
+
+.header__menu-icon__middle--tapped::after {
+          top: 0;
+          -webkit-transform: rotate(-45deg);
+                  transform: rotate(-45deg);
+        }
+
+@media (min-width: 800px) {
+
+.header__menu-icon {
+      display: none
+  }
+  }
+
+.header__menu-content {
+    visibility: hidden;
+    padding-top: 9rem;
+    text-align: center;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+    opacity: 0;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+
+@media (min-width: 800px) {
+
+.header__menu-content {
+      visibility: visible;
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      padding-top: 0rem;
+      opacity: 1
+  }
+  }
+
+.header__menu-content--show {
+      visibility: visible;
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      opacity: 1;
+    }
+
+.header__nav {
+    font-weight: 200;
+    margin-top: 1.2rem;
+  }
+
+@media (min-width: 800px) {
+
+.header__nav {
+      float: right
+  }
+  }
+
+.header ul {
+    padding: 0;
+  }
+
+.header li {
+    display: inline-block;
+    padding-right: 0;
+  }
+
+.header li a {
+      text-decoration: none;
+      color: white;
+      margin: 0;
+      font-size: 1.2rem;
+      background-color: #2f5572;
+
+      padding: 0.4rem 0.6rem;
+    }
+
+@media (min-width: 800px) {
+
+.header li a {
+        background: none;
+        font-size: inherit
+    }
+  }
+
+@media (min-width: 800px) {
+
+.header li {
+      float: right;
+      padding-right: 1rem
+  }
+  }
+
+.header__btn {
+    margin: 1rem 0;
+  }
+
+@media (min-width: 800px) {
+
+.header__btn {
+      float: right
+  }
+  }
+
+@media (min-width: 800px) {
+
+.header {
+    background-color: rgba(47,85,114, 0.3)
+}
   }
 
 .u-tac {
